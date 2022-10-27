@@ -14,12 +14,23 @@ const Pokemon = () => {
       <h1 className="text-center m-auto ">Lista De Pokemones</h1>
       <div className="container m-auto text-center">
         <button
-          onClick={() => setUrl(data.previous)}
+          onClick={() => {
+            if (data.previous !== null) {
+              setUrl(data.previous);
+            }
+          }}
           className="m-2 btn btn-dark "
         >
           Anterior
         </button>
-        <button onClick={() => setUrl(data.next)} className="btn btn-dark">
+        <button
+          onClick={() => {
+            if (data.post !== null) {
+              setUrl(data.next);
+            }
+          }}
+          className="btn btn-dark"
+        >
           Siguiente
         </button>
       </div>
