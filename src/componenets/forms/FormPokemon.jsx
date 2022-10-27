@@ -35,7 +35,7 @@ function FormPokemon() {
         </button>
       </form>
       <div className="justify-content-center">
-        <SearchPokemon nombre={name} />
+        <SearchPokemon nombre={name.toLocaleLowerCase()} />
       </div>
     </div>
   );
